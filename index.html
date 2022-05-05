@@ -11,16 +11,64 @@
   <header class="main-header" roll="banner">
     <img src="" alt="banner for Surf City Zza">
   </header>
+<div Class="container">
   <h1>Surf City Zza</h1>
   <div class="intro">
-    
+    <form id="Name">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" type="text"><br>
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" type="text"><br>
+      <button type="submit" class="btn">Let's get that Zza Bruh!</button>
+    </form>
 
   </div>
-  <div class="toppings">
-
+  <div class="pizza">
+    <form id="new-order">
+      <div class="row order-row">
+        <h4> Size:</h4>
+        <select id="size" name="size" required>
+          <option>Slice O' Pie</option>
+          <option>Small 10"</option>
+          <option>Medium 14"</option>
+          <option>Large 16"</option>
+          <option>Xtra-Large 20"</option>
+        </select>
+      </div>
+      <div class="well col-xs-9">
+        <h4>Toppings:</h4>
+          <div class="col-xs-3">
+            <label for="cheeze">Cheeze:</label><br>
+            <input type="radio" name="topping" value="No Cheeze">No Cheeze<br>
+            <input type="radio" name="topping" value="Mozz">Mozz<br>
+            <input type="radio" name="topping" value="Chedd">Chedd<br>
+            <input type="radio" name="topping" value="Cashew Chev">Cashew Chevre<br>
+            <input type="radio" name="topping" value="Hella">Hella Cheeze Bruh!(all the cheezes)<br>
+          </div>
+          <div class="col-xs-3">
+            <label for="meatz">Meatz:</label><br>
+            <input type="checkbox" name="topping" value="peppedroni">Pepped'roni<br>
+            <input type="checkbox" name="topping" value="facon">Facon<br>
+            <input type="checkbox" name="topping" value="chickie nuggies">Chickie Nuggiez<br>
+            <input type="checkbox" name="topping" value="zausage">Zausage<br>
+            <input type="checkbox" name="topping" value="hyam">Hyam<br>
+          </div>
+          <div class="col-xs-3">
+            <label for="Veggies">Veggiez and Such:</label><br>
+            <input type="checkbox" name="topping" value="Pineapple">Pineapple<br>
+            <input type="checkbox" name="topping" value="onion">Onion<br>
+            <input type="checkbox" name="topping" value="garlic">Garlic<br>
+            <input type="checkbox" name="topping" value="spinach">Spinach<br>
+            <input type="checkbox" name="topping" value="bell pepper">Bell Pepper<br>
+            <input type="checkbox" name="topping" value="shroomiez">Shroomiez<br>
+          </div>
+      </div>
+      <button class="btn btn-success" type="submit" id="add-pizza">Add to Order</button>
+    </form>
   </div>
   <div class="total">
 
   </div>
+</div>
 </body>
 </html>
