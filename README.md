@@ -58,3 +58,16 @@ Surfcity.prototype.removeFromOrder = function(removeItem) {
 }
 
 Expected outcome:([pepped'roni, shroomies], large) -> ([shroomies], large)
+
+Describe: newOrder()
+Test:create new orders and push items to proper arrays
+code:
+Surfcity.prototype.newOrder = function () {
+  this.orderItems.push(this.orderItems);
+  this.orderItems = [];
+  this.orderNumber++;
+}
+
+Expected Outcome: newOrder: addItem pushes to order
+
+

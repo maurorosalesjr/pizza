@@ -50,6 +50,12 @@ Surfcity.prototype.removeFromOrder = function(removeItem) {
 }
 
 
+Surfcity.prototype.newOrder = function () {
+  this.orderItems.push(this.orderItems);
+  this.orderItems = [];
+  this.orderNumber++;
+}
+
 ///////UI logic/////
 
 ß
