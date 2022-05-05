@@ -35,7 +35,7 @@
           <option>Xtra-Large 20"</option>
         </select>
       </div>
-      <div class="well col-xs-9">
+      <div class="col-xs-9">
         <h4>Toppings:</h4>
           <div class="col-xs-3">
             <label for="cheeze">Cheeze:</label><br>
@@ -63,11 +63,20 @@
             <input type="checkbox" name="topping" value="shroomiez">Shroomiez<br>
           </div>
       </div>
-      <button class="btn btn-success" type="submit" id="add-pizza">Add to Order</button>
+      <button class="btn btn-success" type="submit" id="addZza">Add to Order</button>
     </form>
   </div>
+  <div class="confirm-order">
+    <h5>Your Order:<span id="orderRecap"></span></h5>
+    <h5>Your Subtotal:<span id="subtotal"></span></h5>
+    <button class="btn btn-success" type="submit" id="confirmOrder">Confirm Order!</button>
+  </div>
   <div class="total">
-
+    <h5>Thank You, <span id="custName"></span></h5>
+    <h5>Your Surf City Order will be ready in:<span id="waittime"></span></h5>
+    <h5>Order Number:<span id="orderNum"></span></h5>
+    <h5>Your Order:<span id="orderRecap"></span></h5>
+    <h5>Total: $<span id="finalPrice"></span></h5>
   </div>
 </div>
 </body>

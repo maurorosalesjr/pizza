@@ -30,8 +30,24 @@ Pizza.prototype.getSizeArray = function() {
 
 
 
+////surf city////
 
+function Surfcity() {
+  this.orderItems = [];
+  this.itemNumber = 0;
+  this.orderNumber = 1;
 
+}
+
+Surfcity.prototype.addToOrder = function(addItem) {
+  addItem.id = this.itemNumber;
+  this.itemNumber++;
+  this.orderItems.push(addItem);
+}
+
+Surfcity.prototype.removeFromOrder = function(removeItem) {
+  this.orderItems.splice(removeItem, 1, "");
+}
 
 
 ///////UI logic/////
