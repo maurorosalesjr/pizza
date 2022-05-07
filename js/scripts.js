@@ -2,7 +2,6 @@
 function Customer(firstName, lastName, order) {
   this.firstName = firstName;
   this.lastName = lastName;
-  this.order = order;
 }
 
 
@@ -12,19 +11,6 @@ function Customer(firstName, lastName, order) {
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
-  this.price = this.getPrice(toppings, size);
-  this.sizeArray = this.getSizeArray();
-}
-
-Pizza.prototype.getPrice = function() {
-  let basePrice = [5, 10, 18, 23, 30];//[slice, small, medium, large, xlarge]
-  const totalPrice = basePrice[this.sizeArray];
-  return totalPrice
-}
-
-Pizza.prototype.getSizeArray = function() {
-  let sizeOption = ["Slice o'Pie", "Small", "Medium", "Large", "Xtra-Large"]
-  return sizeOption.indexOf(this.size)
 }
 
 
@@ -45,24 +31,28 @@ Surfcity.prototype.addToOrder = function(addItem) {
   this.orderItems.push(addItem);
 }
 
-Surfcity.prototype.removeFromOrder = function(removeItem) {
-  this.orderItems.splice(removeItem, 1, "");
-}
-
-
 Surfcity.prototype.newOrder = function () {
   this.orderItems.push(this.orderItems);
   this.orderItems = [];
   this.orderNumber++;
 }
 
-///////UI logic/////
 
-ß
-$("#new-order").submit(function(event) {
-  event.preventDefault();
-  let newSize = $("#size").val();
-  let cheeze = $("input:radio[name=topping]:checked").val();
-  let topping = $("input:checkbox[name=topping]:checked");
-  let newTopping = [];
+
+$(document).ready(function() {
+  $("#name").submit(function(event) {
+    event.preventDefault();
+    let firstName = $("#firstName").val();
+    let lastName = $("#lastName").val();
+    let customer = new Customer(firstName, lastName)
+    $("#custName").text(customer.firstName + " " + customer.lastName)
+  })
+
+
+
+
+  $("#new-order").submit(function(event) {
+    event.preventDefault();
+
+  })
 })

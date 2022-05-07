@@ -70,4 +70,8 @@ Surfcity.prototype.newOrder = function () {
 
 Expected Outcome: newOrder: addItem pushes to order
 
+Describe: UI Logic
+Test: should link UI items to functions and html
+code:
 
+Expected Outcome:website functionality

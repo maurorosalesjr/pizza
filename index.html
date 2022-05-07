@@ -9,12 +9,12 @@
 </head>
 <body>
   <header class="main-header" roll="banner">
-    <img src="" alt="banner for Surf City Zza">
+    <img src="img/pizza.gif" alt="banner for Surf City Zza">
   </header>
 <div Class="container">
   <h1>Surf City Zza</h1>
   <div class="intro">
-    <form id="Name">
+    <form id="name">
       <label for="firstName">First Name:</label>
       <input id="firstName" type="text"><br>
       <label for="lastName">Last Name:</label>
@@ -46,14 +46,6 @@
             <input type="radio" name="topping" value="Hella">Hella Cheeze Bruh!(all the cheezes)<br>
           </div>
           <div class="col-xs-3">
-            <label for="meatz">Meatz:</label><br>
-            <input type="checkbox" name="topping" value="peppedroni">Pepped'roni<br>
-            <input type="checkbox" name="topping" value="facon">Facon<br>
-            <input type="checkbox" name="topping" value="chickie nuggies">Chickie Nuggiez<br>
-            <input type="checkbox" name="topping" value="zausage">Zausage<br>
-            <input type="checkbox" name="topping" value="hyam">Hyam<br>
-          </div>
-          <div class="col-xs-3">
             <label for="Veggies">Veggiez and Such:</label><br>
             <input type="checkbox" name="topping" value="Pineapple">Pineapple<br>
             <input type="checkbox" name="topping" value="onion">Onion<br>
@@ -62,6 +54,15 @@
             <input type="checkbox" name="topping" value="bell pepper">Bell Pepper<br>
             <input type="checkbox" name="topping" value="shroomiez">Shroomiez<br>
           </div>
+          <div class="col-xs-3">
+            <label for="meatz">Meatz:</label><br>
+            <input type="checkbox" name="topping" value="peppedroni">Pepped'roni<br>
+            <input type="checkbox" name="topping" value="facon">Facon<br>
+            <input type="checkbox" name="topping" value="chickie nuggies">Chickie Nuggiez<br>
+            <input type="checkbox" name="topping" value="zausage">Zausage<br>
+            <input type="checkbox" name="topping" value="hyam">Hyam<br>
+          </div>
+          
       </div>
       <button class="btn btn-success" type="submit" id="addZza">Add to Order</button>
     </form>
@@ -73,7 +74,7 @@
   </div>
   <div class="total">
     <h5>Thank You, <span id="custName"></span></h5>
-    <h5>Your Surf City Order will be ready in:<span id="waittime"></span></h5>
+    <h5>Your Surf City Order will be ready in:<span id="waitTime"></span></h5>
     <h5>Order Number:<span id="orderNum"></span></h5>
     <h5>Your Order:<span id="orderRecap"></span></h5>
     <h5>Total: $<span id="finalPrice"></span></h5>
