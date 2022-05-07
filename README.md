@@ -71,7 +71,27 @@ Surfcity.prototype.newOrder = function () {
 Expected Outcome: newOrder: addItem pushes to order
 
 Describe: UI Logic
-Test: should link UI items to functions and html
+Test: should link UI items to functions and html, take name from sign in section to thank you area
 code:
+$(document).ready(function() {
+  $("#name").submit(function(event) {
+    event.preventDefault();
+    let firstName = $("#firstName").val();
+    let lastName = $("#lastName").val();
+    let customer = new Customer(firstName, lastName)
+    $("#custName").text(customer.firstName + " " + customer.lastName)
+  })
+Expected Outcome:website functionality. captures the name of user and places it at the thank you area.
 
-Expected Outcome:website functionality
+Describe: waitTime();
+Test: should give user a wait time for thier pizza. using a random number generator between the numbers of 20 - 55 
+Code: 
+Customer.prototype.waitTime = function() {
+  let waitTime = Math.floor(Math.random() * (55 - 19) + 19);
+  return waitTime;
+}
+
+...
+$("#waitTime").text(customer.waitTime);
+
+Expected Outcome: when user hits submit, the website will create a number between 20 through 55 to simulate a pizzeria rush or slowdown in customers
