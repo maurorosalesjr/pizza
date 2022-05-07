@@ -21,30 +21,25 @@ function Pizza(toppings, size) {
   
 }
 
-
+Pizza.prototype.basePrice = function() {
+  let basePrice = 5;
+  if(this.size === "small") {
+    basePrice += 5;
+  } else if(this.size === "medium") {
+    basePrice += 10;
+  } else if(this.size === "large") {
+    basePrice += 17;
+  }else if(this.size === "xtraLarge") {
+    basePrice += 25;
+  }
+}
 
 
 
 
 ////surf city////
 
-function Surfcity() {
-  this.orderItems = [];
-  this.itemNumber = 0;
-  
-}
 
-Surfcity.prototype.addToOrder = function(addItem) {
-  addItem.id = this.itemNumber;
-  this.itemNumber++;
-  this.orderItems.push(addItem);
-}
-
-Surfcity.prototype.newOrder = function () {
-  this.orderItems.push(this.orderItems);
-  this.orderItems = [];
-  
-}
 
 
 
@@ -63,9 +58,14 @@ $(document).ready(function() {
 
 
 
-  $("#new-order").submit(function(event) {
+  $("#confirmOrder").submit(function(event) {
     event.preventDefault();
-    
-
+    let newSize = $("input:radio[name=size]:checked").val()
+    let cheeze = $("input:radio[name=topping]:checked").val();
+    let topping = $("input:checkbox[name=topping]:checked");
+    let pizza = new Pizza(newSize);
+    console.log(newSize)
+    $("#orderRecapSub").text(newSize);
+    $("#subtotal").text(pizza.basePrice);
   })
 })

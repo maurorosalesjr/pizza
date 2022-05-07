@@ -28,11 +28,11 @@
       <div class="row order-row">
         <h4> Size:</h4>
         <select id="size" name="size" required>
-          <option value="5">Slice O' Pie</option>
-          <option value="10">Small 10"</option>
-          <option value="18">Medium 14"</option>
-          <option value="23">Large 16"</option>
-          <option value="30">Xtra-Large 20"</option>
+          <option value="slice">Slice O' Pie</option>
+          <option value="small">Small 10"</option>
+          <option value="medium">Medium 14"</option>
+          <option value="large">Large 16"</option>
+          <option value="xtraLarge">Xtra-Large 20"</option>
         </select>
       </div>
       <div class="col-xs-9">
@@ -68,7 +68,7 @@
     </form>
   </div>
   <div class="confirm-order">
-    <h5>Your Order:<span id="orderRecap"></span></h5>
+    <h5>Your Order:<span id="orderRecapSub"></span></h5>
     <h5>Your Subtotal:<span id="subtotal"></span></h5>
     <button class="btn btn-success" type="submit" id="confirmOrder">Confirm Order!</button>
   </div>

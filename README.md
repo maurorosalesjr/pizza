@@ -108,3 +108,9 @@ Code:Customer.prototype.orderNumber = function() {
 $("#orderNum").text(customer.orderNumber);
 
 Expected Output: when customer signs in, website will generate a four digit order number, simulating an actual busy restaraunt
+
+Describe: newOrder();
+Test: should recal the size of the pizza in Your Order field.
+Code:
+
+Expected Output: when user selects the size, it will be shown in the "Your Order" area
