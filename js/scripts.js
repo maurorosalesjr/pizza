@@ -10,6 +10,10 @@ Customer.prototype.waitTime = function() {
   return waitTime;
 }
 
+Customer.prototype.orderNumber = function() {
+  let orderNumber = Math.floor(Math.random() * (9999 - 1000) - 1000);
+  return orderNumber;
+}
 //////pizza builder/////
 function Pizza(toppings, size) {
   this.toppings = toppings;
@@ -27,7 +31,7 @@ function Pizza(toppings, size) {
 function Surfcity() {
   this.orderItems = [];
   this.itemNumber = 0;
-  this.orderNumber = 1;
+  
 }
 
 Surfcity.prototype.addToOrder = function(addItem) {
@@ -39,7 +43,7 @@ Surfcity.prototype.addToOrder = function(addItem) {
 Surfcity.prototype.newOrder = function () {
   this.orderItems.push(this.orderItems);
   this.orderItems = [];
-  this.orderNumber++;
+  
 }
 
 
@@ -53,6 +57,7 @@ $(document).ready(function() {
     let customer = new Customer(firstName, lastName)
     $("#custName").text(customer.firstName + " " + customer.lastName)
     $("#waitTime").text(customer.waitTime);
+    $("#orderNum").text(customer.orderNumber);
   })
 
 

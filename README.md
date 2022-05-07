@@ -95,3 +95,16 @@ Customer.prototype.waitTime = function() {
 $("#waitTime").text(customer.waitTime);
 
 Expected Outcome: when user hits submit, the website will create a number between 20 through 55 to simulate a pizzeria rush or slowdown in customers
+
+
+Describe: orderNumber();
+Test: should assign an order number to the customer
+Code:Customer.prototype.orderNumber = function() {
+  let orderNumber = Math.floor(Math.random() * (9999 - 1000) - 1000);
+  return orderNumber;
+}
+
+...
+$("#orderNum").text(customer.orderNumber);
+
+Expected Output: when customer signs in, website will generate a four digit order number, simulating an actual busy restaraunt
