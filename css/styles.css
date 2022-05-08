@@ -1,5 +1,19 @@
-container {
+.container {
   margin: left 10px;
+  background-color: aquamarine;
 }
+
+.confirm-order {
+  border: 155px;
+  border-radius: 20%;
+  border-color: blueviolet;
+  background-color: aliceblue;
+}
+
+.column {
+  width: 20%;
+  float: left;
+}
+
 
 

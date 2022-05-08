@@ -11,33 +11,32 @@ Customer.prototype.waitTime = function() {
 }
 
 Customer.prototype.orderNumber = function() {
-  let orderNumber = Math.floor(Math.random() * (9999 - 1000) - 1000);
+  let orderNumber = Math.floor(Math.random() * (9999 - 1000) + 1000);
   return orderNumber;
 }
 //////pizza builder/////
 function Pizza(toppings, size) {
   this.toppings = toppings;
   this.size = size;
-  
-}
-
-Pizza.prototype.basePrice = function() {
-  let basePrice = 5;
-  if(this.size === "small") {
-    basePrice += 5;
-  } else if(this.size === "medium") {
-    basePrice += 10;
-  } else if(this.size === "large") {
-    basePrice += 17;
-  }else if(this.size === "xtraLarge") {
-    basePrice += 25;
-  }
+  console.log(this.size); 
 }
 
 
+Pizza.prototype.crustPrice = function() {
+  let crustPrice = 5;
+  if(this.size === "Small") {
+    crustPrice += 5;
+  } else if(this.size === "Medium") {
+    crustPrice += 10;
+  } else if(this.size === "Large") {
+    crustPrice += 17;
+  }else if(this.size === "XtraLarge") {
+    crustPrice += 25;
+  } 
+  return output;
+};
 
 
-////surf city////
 
 
 
@@ -49,23 +48,22 @@ $(document).ready(function() {
     event.preventDefault();
     let firstName = $("#firstName").val();
     let lastName = $("#lastName").val();
-    let customer = new Customer(firstName, lastName)
+    let size = $("#size").val()
+  
+    let toppings = [];
+    toppings = $("input[type='checkbox']:checked").val();
+    //let sizePrice = parseInt(crustPrice(this.size));
+    let customer = new Customer(firstName, lastName);
+    let pizza = new Pizza(toppings, size);
+    let finalPrice = parseInt(pizza.toppings + size.crustPrice);
+    
+    
     $("#custName").text(customer.firstName + " " + customer.lastName)
     $("#waitTime").text(customer.waitTime);
     $("#orderNum").text(customer.orderNumber);
+    $("#orderRecap").text(`1 ${size} pizza with ${toppings} items`);
+    $("#finalPrice").text(finalPrice);
+    $(".confrim-order").hide();
   })
 
-
-
-
-  $("#confirmOrder").submit(function(event) {
-    event.preventDefault();
-    let newSize = $("input:radio[name=size]:checked").val()
-    let cheeze = $("input:radio[name=topping]:checked").val();
-    let topping = $("input:checkbox[name=topping]:checked");
-    let pizza = new Pizza(newSize);
-    console.log(newSize)
-    $("#orderRecapSub").text(newSize);
-    $("#subtotal").text(pizza.basePrice);
-  })
 })

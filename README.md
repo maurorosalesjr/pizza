@@ -111,6 +111,16 @@ Expected Output: when customer signs in, website will generate a four digit orde
 
 Describe: newOrder();
 Test: should recal the size of the pizza in Your Order field.
-Code:
+Code:...
+let size = $("#size").val()
 
+...
+    $("#orderRecap").text(`1 ${size} pizza with ${this.toppings}`);
 Expected Output: when user selects the size, it will be shown in the "Your Order" area
+
+
+Describe: add toppings
+test: should push toppings from order form to your order area if user has selected it
+code:
+
+expected outcome: items selected should show up on the your order 
