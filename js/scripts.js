@@ -24,13 +24,13 @@ function Pizza(toppings, size) {
 
 Pizza.prototype.crustPrice = function() {
   let crustPrice = 5;
-  if(this.size === "Small") {
+  if(this.size === "small") {
     crustPrice += 5;
-  } else if(this.size === "Medium") {
+  } else if(this.size === "medium") {
     crustPrice += 10;
-  } else if(this.size === "Large") {
+  } else if(this.size === "large") {
     crustPrice += 17;
-  }else if(this.size === "XtraLarge") {
+  }else if(this.size === "xtraLarge") {
     crustPrice += 25;
   } 
   return output;

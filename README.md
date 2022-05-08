@@ -1,4 +1,41 @@
-TESTS:
+# Surf City Zzza
+
+#### By Mauro Rosales
+
+#### Website to order pizza from
+
+## Technologies Used
+
+* macbook air
+* chrome
+* vscode
+* Aseprite
+
+## Description
+
+user inputs their name, for the loyalty program. Then chooses the size of their pizza, as well as the toppings they like. The site will give you an order number, simulated wait time, an order recap and the price of your order
+
+## Setup/Installation Requirements
+
+* fork the git repo
+* clone the repo
+* click and drag index.html to the browser of your choice
+
+
+
+
+## Known Bugs
+
+* price function doesnt work properly
+* incomplete
+
+## License
+
+for further information, email me at mauro.rosales247@gmail.com
+
+
+
+## Tests
 Describe: customer();
 Test: should return a customers first, last name and their order
 code:function Customer(firstName, lastName, order) {
@@ -124,3 +161,7 @@ test: should push toppings from order form to your order area if user has select
 code:
 
 expected outcome: items selected should show up on the your order 
+
+
+
+Copyright (c) May 7, 2022 Mauro Rosales jr
