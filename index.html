@@ -38,28 +38,33 @@
         <h4>Toppings:</h4>
           <div class="column">
             <label for="cheeze" id="cheeze">Cheeze:</label><br>
-            <input type="radio" name="cheeze">No Cheeze<br>
-            <input type="radio" name="cheeze">Mozz<br>
-            <input type="radio" name="cheeze">Chedd<br>
-            <input type="radio" name="cheeze">Cashew Cheeze Sauce<br>
-            <input type="radio" name="cheeze">Hella Cheeze Bruh!(all the cheezes, plus even mooooorrrreee!!!!)<br>
+              <input type="radio" id="cheeze" name="cheeze" value="No Cheeze">
+                <label for="cheeze">No Cheeze</label><br>
+              <input type="radio" id="cheeze" name="cheeze" value="Mozz">
+                <label for="cheeze">Mozz</label><br>
+              <input type="radio" id="cheeze" name="cheeze" value="Chedd">
+                <label for="cheeze">Chedd</label><br>
+              <input type="radio" id="cheeze" name="cheeze" value="Cashew Cheeze Sauce">
+                <label for="cheeze">Cashew Cheeze Sauce</label><br>
+              <input type="radio" id="cheeze" name="cheeze" value="Hella Cheeze">
+                <label for="cheeze">Hella Cheeze(all of the cheezes)</label><br>
           </div>
           <div class="column">
             <label for="Veggies">Veggiez and Such:</label><br>
-            <input type="checkbox" name="topping" value="1">Pineapple<br>
-            <input type="checkbox" name="topping" value="1">Onion<br>
-            <input type="checkbox" name="topping" value="1">Garlic<br>
-            <input type="checkbox" name="topping" value="1">Spinach<br>
-            <input type="checkbox" name="topping" value="1">Bell Pepper<br>
-            <input type="checkbox" name="topping" value="1">Shroomiez<br>
+            <input type="checkbox" name="topping" value="Pineapple">Pineapple<br>
+            <input type="checkbox" name="topping" value="Onion">Onion<br>
+            <input type="checkbox" name="topping" value="Garlic">Garlic<br>
+            <input type="checkbox" name="topping" value="Spinach">Spinach<br>
+            <input type="checkbox" name="topping" value="Bell Pepper">Bell Pepper<br>
+            <input type="checkbox" name="topping" value="Shroomiez">Shroomiez<br>
           </div>
           <div class="column">
             <label for="meatz">Meatz:</label><br>
-            <input type="checkbox" name="topping" value="1">Pepped'roni<br>
-            <input type="checkbox" name="topping" value="1">Facon<br>
-            <input type="checkbox" name="topping" value="1">Chickie Nuggiez<br>
-            <input type="checkbox" name="topping" value="1">Zausage<br>
-            <input type="checkbox" name="topping" value="1">Hyam<br>
+            <input type="checkbox" name="topping" value="Pepped'roni">Pepped'roni<br>
+            <input type="checkbox" name="topping" value="Facon">Facon<br>
+            <input type="checkbox" name="topping" value="Chickie Nuggiez">Chickie Nuggiez<br>
+            <input type="checkbox" name="topping" value="Zausage">Zausage<br>
+            <input type="checkbox" name="topping" value="Hyam">Hyam<br>
           </div>          
       </div>
       <br>
@@ -69,7 +74,9 @@
       </div>
     </form>
   </div>
-  
+  <br>
+  <br>
+  <br>
   <div class="total">
     <h5>Thank You, <span id="custName"></span></h5>
     <h5>Your Surf City Order will be ready in: <span id="waitTime"></span> minutes!</h5>

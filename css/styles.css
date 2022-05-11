@@ -8,6 +8,7 @@
   border-radius: 2%;
   border-color: blueviolet;
   background-color: aliceblue;
+  display: block;
 }
 
 .column {
@@ -26,3 +27,7 @@ h1 {
 text-align: center;
 }
 
+.total {
+  display: none;
+  
+}

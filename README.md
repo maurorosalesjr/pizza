@@ -26,8 +26,8 @@ user inputs their name, for the loyalty program. Then chooses the size of their 
 
 ## Known Bugs
 
-* price function doesnt work properly
-* incomplete
+* no known bugs
+* 
 
 ## License
 
